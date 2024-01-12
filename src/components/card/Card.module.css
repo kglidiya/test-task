@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  height: 344px;
+  object-fit: cover;
+}
+
+.caption {
+  margin-top: 34px;
+  margin-bottom: 16px;
+  color: #525c7a;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.056px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.caption:hover {
+  color: #4fba67;
+}
+
+.date {
+  color: #a2acc7;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+@media (max-width: 768px) {
+  .caption {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .date {
+    font-size: 14px;
+  }
+}
+

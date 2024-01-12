@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .wrapper:hover {
+    cursor: pointer;
+  }
+
+.position {
+  display: flex;
+  align-items: center;
+
+}
