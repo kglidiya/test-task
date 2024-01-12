@@ -1,6 +1,6 @@
 # Тестовое задание
 
-## Ссылка на проект: http://seven-winds-test-task.ru/
+## Ссылка на проект: https://test-task-woad-seven.vercel.app/
 
 ## Запуск проекта
 - npm install
