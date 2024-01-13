@@ -23,8 +23,7 @@ export default function Card({ item, slideWidth, border }: ICard) {
               ? `${slideWidth * 2}px`
               : `${slideWidth}px`,
           borderRadius: border,
-          // Для сохранения пропорций квадрата. Мне кажется, так лучше
-          // height: `${slideWidth}px`
+          height: `${slideWidth}px`
         }}
       />
       <p className={styles.caption}>{item.description}</p>

@@ -39,30 +39,30 @@ export const data = [
         description: 'Как повысить удои коров',
         date: '12 февраля 2024'
     },
-    // {
-    //     id: 6,
-    //     types: 'types__5',
-    //     img: 'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
-    //     title: 'usefulMaterial',
-    //     description: 'Как повысить удои коров: факторы, от которых зависит молочная продуктивность',
-    //     date: '12 февраля 2024'
-    // },
-    // {
-    //     id: 7,
-    //     types: 'types__5',
-    //     img: 'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
-    //     title: 'usefulMaterial',
-    //     description: 'Как повысить удои коров',
-    //     date: '12 февраля 2024'
-    // },
-    // {
-    //     id: 8,
-    //     types: 'types__5',
-    //     img: 'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
-    //     title: 'usefulMaterial',
-    //     description: 'Как повысить удои коров',
-    //     date: '12 февраля 2024'
-    // }
+    {
+        id: 6,
+        types: 'types__5',
+        img: 'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
+        title: 'usefulMaterial',
+        description: 'Как повысить удои коров: факторы, от которых зависит молочная продуктивность',
+        date: '12 февраля 2024'
+    },
+    {
+        id: 7,
+        types: 'types__5',
+        img: 'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
+        title: 'usefulMaterial',
+        description: 'Как повысить удои коров',
+        date: '12 февраля 2024'
+    },
+    {
+        id: 8,
+        types: 'types__5',
+        img: 'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
+        title: 'usefulMaterial',
+        description: 'Как повысить удои коров',
+        date: '12 февраля 2024'
+    }
 ]
 
 export default data
