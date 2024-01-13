@@ -5,7 +5,7 @@ import { ISlide } from "@/utils/types";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Sider.module.css";
 import Card from "../card/Card";
-import shapes from "@/utils/shapes";
+import { shapesDesktop, shapesMobile } from "@/utils/shapes";
 import ArrowNext from "../ui/arrowNext/ArrowNext";
 import ArrowPrev from "../ui/arrowPrev/ArrowPrev";
 import { getRandomItem } from "@/utils/helpers";
@@ -24,7 +24,8 @@ export default function Slider({ data }: ISliderProps) {
   const refTrack = useRef<HTMLDivElement | null>(null);
   const refWrapper = useRef<HTMLDivElement | null>(null);
   const [isMobile, setIsMobile] = useState(false);
-
+  const [borderRadius, setBorderRadius] = useState(shapesDesktop);
+  
   const getRandomBorderRadius = (arr: string[]) => {
     const res = [] as string[];
     res.push(getRandomItem(arr));
@@ -48,8 +49,6 @@ export default function Slider({ data }: ISliderProps) {
     }
     return res;
   };
-
-  const [borderRadius, setBorderRadius] = useState(shapes);
 
   const setCardWidth = () => {
     if (refWrapper.current) {
@@ -133,7 +132,6 @@ export default function Slider({ data }: ISliderProps) {
   }, [pos, slide, slideWidth]);
 
   useEffect(() => {
-    setBorderRadius(getRandomBorderRadius(shapes));
     function handleResize() {
       if (window.innerWidth < 768) {
         setIsMobile(true);
@@ -142,8 +140,16 @@ export default function Slider({ data }: ISliderProps) {
       }
     }
     window.addEventListener("resize", handleResize);
+    handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (isMobile) {
+      setBorderRadius(getRandomBorderRadius(shapesMobile));
+    } else setBorderRadius(getRandomBorderRadius(shapesDesktop));
+  }, [isMobile]);
+
   return (
     <div className={styles.wrapper} ref={refWrapper}>
       <h1 className={styles.title}>Полезные материалы</h1>
