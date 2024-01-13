@@ -31,12 +31,20 @@ export default function Slider({ data }: ISliderProps) {
 
     while (res.length < data.length) {
       const prev = res[res.length - 1];
-      let item = getRandomItem(arr);
-      if (item === "50%") {
-        if (prev !== item && data[res.length - 1].description.length > 35) {
-          res.push(item);
+      let randomItem = getRandomItem(arr);
+
+      if (randomItem === "50%") {
+        if (prev !== randomItem && data[res.length].description.length < 35) {
+          res.push(randomItem);
         }
-      } else res.push(item);
+      }
+      if (randomItem === "600px") {
+        if (data[res.length].description.length > 35) {
+          res.push(randomItem);
+        }
+      } else if (randomItem !== "600px" && randomItem !== "50%") {
+        res.push(randomItem);
+      }
     }
     return res;
   };
